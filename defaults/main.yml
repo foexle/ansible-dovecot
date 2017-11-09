@@ -325,6 +325,19 @@ dovecot_lmtp_config_map:
         mode: 0600
 
 
+# .. envvar:: dovecot_auth_config_map
+#
+# Custom auth configuration poperties.
+# Example:
+# dovecot_auth_config_map:
+#   service:
+#     unix_listener:
+#       /var/spool/postfix/private/auth:
+#         user: 'postfix'
+#         group: 'postfix'
+#         mode: 0660
+dovecot_auth_config_map: []
+
 # .. envvar:: dovecot_postfix_transport
 #
 # Postfix mail transport target if LMTP is enabled. For more details see
