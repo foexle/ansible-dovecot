@@ -27,3 +27,8 @@ namespace inbox {
 dotlock_use_excl = no
 mbox_write_locks = fcntl
 {% endif %}
+
+{% if dovecot_mail_uid is defined and dovecot_mail_gid is defined %}
+mail_uid = {{ dovecot_mail_uid }}
+mail_gid = {{ dovecot_mail_gid }}
+{% endif %}

@@ -59,6 +59,16 @@ dovecot_deny_users: [ 'root' ]
 # Location <http://wiki2.dovecot.org/MailLocation>`_
 dovecot_mail_location: 'mbox:~/mail:INBOX=/var/mail/%u'
 
+# .. envvar:: dovecot_mail_uid
+#
+# Mailbox user id to get write access to the mail location
+dovecot_mail_uid: '1000'
+
+# .. envvar:: dovecot_mail_gid
+#
+# Mailbox group id to get write access to the mail location
+dovecot_mail_gid: '1000'
+
 
 # .. envvar:: dovecot_mail_dotlock
 #
