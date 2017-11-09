@@ -26,8 +26,10 @@ ssl_dh_parameters_length = 2048
 
 {% set dovecot_tpl_tls_cert_file    = dovecot_pki_path + "/" + dovecot_pki_realm + "/" + dovecot_pki_crt %}
 {% set dovecot_tpl_tls_key_file     = dovecot_pki_path + "/" + dovecot_pki_realm + "/" + dovecot_pki_key %}
+{% set dovecot_tpl_tls_ca_file     = dovecot_pki_path + "/" + dovecot_pki_realm + "/" + dovecot_pki_ca %}
 ssl_cert    = <{{ dovecot_tpl_tls_cert_file }}
 ssl_key     = <{{ dovecot_tpl_tls_key_file }}
+ssl_ca			= <{{ dovecot_tpl_tls_ca_file }}
 ssl_protocols   = {{ dovecot_ssl_protocols }}
 ssl_cipher_list = {{ dovecot_ssl_cipher_list }}
 {% else %}

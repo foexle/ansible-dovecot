@@ -222,6 +222,10 @@ dovecot_pki_crt: 'default.crt'
 # Default private key, relative to ``dovecot_pki_realm`` variable
 dovecot_pki_key: 'default.key'
 
+# .. envvar:: dovecot_pki_ca
+#
+# Default CA certificate, relative to ``dovecot_pki_realm`` variable
+dovecot_pki_ca: 'default.ca.crt'
 
 # .. envvar:: dovecot_ssl_required
 #
